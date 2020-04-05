@@ -1,0 +1,7 @@
+task stage {
+    dependsOn ':marCat-api:bootJar'
+}
+
+
+
+

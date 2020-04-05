@@ -1,0 +1,1 @@
+web java -Dspring.profiles.active=staging -Dserver.port=$PORT $JAVA_OPTS -jar marCat-api/build/libs/*.jar
