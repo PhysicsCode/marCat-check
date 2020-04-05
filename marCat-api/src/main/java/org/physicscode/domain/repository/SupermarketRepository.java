@@ -5,6 +5,7 @@ import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import reactor.core.publisher.Mono;
 
-public interface SuperMarketRepository extends ReactiveMongoRepository<SupermarketData, ObjectId> {
+public interface SupermarketRepository extends ReactiveMongoRepository<SupermarketData, ObjectId>, SupermarketCustomRepository {
+
     Mono<SupermarketData> findByGoogleIdAndCity(String googleCode, String city);
 }
