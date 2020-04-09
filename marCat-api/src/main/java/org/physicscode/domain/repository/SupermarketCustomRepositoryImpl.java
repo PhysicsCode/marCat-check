@@ -16,11 +16,11 @@ public class SupermarketCustomRepositoryImpl implements SupermarketCustomReposit
 
     private final ReactiveMongoTemplate reactiveMongoTemplate;
 
-    public Mono<UpdateResult> insertFeedbackToSuperMarket(String googleCode, String city, FeedbackEntity feedback) {
+    public Mono<UpdateResult> insertFeedbackToSuperMarket(String googleCode, FeedbackEntity feedback) {
 
         Query query = new Query();
         query.addCriteria(where("googleCode").is(googleCode));
-        query.addCriteria(where("city").is(city));
+
         Update update = new Update();
         update.addToSet("feedbackList", feedback);
 

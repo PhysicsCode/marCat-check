@@ -1,2 +1,4 @@
 rootProject.name = 'marCat-check'
 include 'marCat-api'
+include 'marCat-geo-api'
+

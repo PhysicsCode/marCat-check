@@ -18,7 +18,7 @@ public class CoreController {
     private final SuperMarketService superMarketService;
 
     @GetMapping("/supermarket")
-    public Mono<ResponseEntity<SupermarketDataDTO>> retrieveSuperMarketData(@RequestParam("location-id") LocatorIdentifier locationId) {
+    public Mono<ResponseEntity<SupermarketDataDTO>> retrieveSuperMarketData(@RequestParam("location-id") String locationId) {
 
         superMarketInputConverter.validateLocationInput(locationId);
 
@@ -27,11 +27,11 @@ public class CoreController {
     }
 
     @PostMapping("/supermarket")
-    public Mono<ResponseEntity<SupermarketDataDTO>> submitSupermarketFeedback(@RequestBody SuperMarketFeedbackInputDTO superMarketFeedbackInputDTO) {
+    public Mono<ResponseEntity<String>> submitSupermarketFeedback(@RequestBody SuperMarketFeedbackInputDTO superMarketFeedbackInputDTO) {
 
         superMarketInputConverter.validateFeedbackInput(superMarketFeedbackInputDTO);
-
-        return superMarketService.publishFeedback(superMarketFeedbackInputDTO)
-                .map(ResponseEntity::ok);
+        return Mono.just(ResponseEntity.ok("Tus muertos, te veo en el messenger y me desconecto"));
+        //return superMarketService.publishFeedback(superMarketFeedbackInputDTO)
+        //        .map(ResponseEntity::ok);
     }
 }

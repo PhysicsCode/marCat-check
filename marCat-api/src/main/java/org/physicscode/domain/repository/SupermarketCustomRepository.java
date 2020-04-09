@@ -6,5 +6,5 @@ import reactor.core.publisher.Mono;
 
 public interface SupermarketCustomRepository {
 
-    Mono<UpdateResult> insertFeedbackToSuperMarket(String googleCode, String city, FeedbackEntity feedback);
+    Mono<UpdateResult> insertFeedbackToSuperMarket(String googleCode, FeedbackEntity feedback);
 }

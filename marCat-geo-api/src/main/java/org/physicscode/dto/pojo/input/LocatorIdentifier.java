@@ -6,4 +6,5 @@ import lombok.Data;
 public class LocatorIdentifier {
 
     private String googleCode;
+    private String city;
 }

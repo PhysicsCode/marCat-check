@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SuperMarketInputConverter {
 
-    public void validateLocationInput(LocatorIdentifier locationId) {
+    public void validateLocationInput(String locationId) {
 
     }
 
