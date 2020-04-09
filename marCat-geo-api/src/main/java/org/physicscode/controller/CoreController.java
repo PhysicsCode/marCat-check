@@ -14,12 +14,12 @@ import reactor.core.publisher.Mono;
 public class CoreController {
 
     private final GeoDataRepository geoDataRepository;
-
+/*
     @GetMapping("/supermarket")
     public Mono<ResponseEntity<SupermarketDataDTO>> retrieveSuperMarketData(@RequestParam("location-id") LocatorIdentifier locationId) {
 
-        return superMarketService.retrieveSuperMarketData(locationId)
-                .map(ResponseEntity::ok);
+        //return superMarketService.retrieveSuperMarketData(locationId)
+        //        .map(ResponseEntity::ok);
     }
 
     @PostMapping("/supermarket")
@@ -30,4 +30,6 @@ public class CoreController {
         return superMarketService.publishFeedback(superMarketFeedbackInputDTO)
                 .map(ResponseEntity::ok);
     }
+
+ */
 }
