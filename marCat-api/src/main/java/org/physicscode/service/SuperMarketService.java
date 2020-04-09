@@ -45,7 +45,7 @@ public class SuperMarketService {
 
         FeedbackEntity feedbackEntity = superMarketDataMapper.mapToFeedbackEntity(superMarketFeedbackInputDTO);
 
-        return supermarketRepository.findByGoogle(superMarketFeedbackInputDTO.getGoogleCode())
+        return supermarketRepository.findByGoogleId(superMarketFeedbackInputDTO.getGoogleCode())
                 .switchIfEmpty(createSuperMarketEntity(superMarketFeedbackInputDTO.getGoogleCode()))
                 .flatMap(supermarketData -> {
                     String feedbackId = UUID.randomUUID().toString();

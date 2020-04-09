@@ -7,5 +7,5 @@ import reactor.core.publisher.Mono;
 
 public interface SupermarketRepository extends ReactiveMongoRepository<SupermarketData, ObjectId>, SupermarketCustomRepository {
 
-    Mono<SupermarketData> findByGoogle(String googleCode);
+    Mono<SupermarketData> findByGoogleId(String googleId);
 }
